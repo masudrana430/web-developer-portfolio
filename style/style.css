@@ -29,7 +29,16 @@
     padding: 18px 35px;
     border-radius: 5px;
     font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
+.btn-primary:hover {
+    color: #fff;
+    background: linear-gradient(to right, #ff6600, #cc5200); /* Fix here */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 
 .sec-title {
     font-size: 35px;
@@ -116,8 +125,12 @@ nav li a {
 
 .bannerProfilePic {
     width: 584px;
+    transition: all 0.4s;
 }
-
+.bannerProfilePic:hover {
+    /* border-color: var(--accent); */
+    transform: translateX(-8px);
+}
 /* main style */
 main {
     max-width: 1140px;
@@ -150,6 +163,7 @@ main section {
 .skills-container {
     display: flex;
     gap: 24px;
+    
 
 }
 
@@ -157,8 +171,13 @@ main section {
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 6px 50px 0px rgba(0, 0, 0, 0.06);
+    transition: transform 0.5s ease;
 }
-
+.skill:hover {
+    /* background-color: var(--navy); */
+    /* border-color: var(--accent); */
+    transform: translateX(-5px);
+}
 /* resume section style */
 .resume-container {
     display: flex;
@@ -228,7 +247,9 @@ footer {
 
 }
 
-footer input[type="text"],footer input[type="email"],footer textarea{
+footer input[type="text"],
+footer input[type="email"],
+footer textarea {
     height: 64px;
     border-radius: 5px;
     background-color: white;
